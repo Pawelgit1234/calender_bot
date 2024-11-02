@@ -1,6 +1,7 @@
 # My files and directories
 todo.txt
 .env
+src/data.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
