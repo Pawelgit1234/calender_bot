@@ -26,5 +26,3 @@ class Task(Base):
 
 engine = create_engine("sqlite:///data.db")
 Base.metadata.create_all(engine)
-
-
