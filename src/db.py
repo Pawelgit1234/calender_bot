@@ -15,6 +15,7 @@ class User(Base):
 	tasks: Mapped[list["Task"]] = relationship("Task", back_populates="user")
 	lat: Mapped[float] = mapped_column()
 	lon: Mapped[float] = mapped_column()
+	was_notified: Mapped[bool] = mapped_column(default=False)
 
 class Task(Base):
 	__tablename__ = 'tasks'

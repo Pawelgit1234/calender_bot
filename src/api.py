@@ -8,7 +8,7 @@ import aiohttp
 
 load_dotenv()
 
-WEATHER_TOKEN = getenv('WEATHER_TOKEN')
+WEATHER_TOKEN = getenv('WEATHER_TOKEN') # openweathermap.org
 
 async def get_weather(lat: float, lon: float) -> str:
 	url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={WEATHER_TOKEN}'
