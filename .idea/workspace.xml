@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72b6a2c4-ca93-4b3d-9937-491a6a1722e3" name="Changes" comment="set notification time">
+    <list default="true" id="72b6a2c4-ca93-4b3d-9937-491a6a1722e3" name="Changes" comment="deleted task notification time, all commands finish, automatic sended notifications">
+      <change afterPath="$PROJECT_DIR$/src/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/keyboards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/keyboards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/states.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/states.py" afterDir="false" />
     </list>
@@ -42,6 +43,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.api.executor&quot;: &quot;Run&quot;,
     &quot;Python.commands.executor&quot;: &quot;Run&quot;,
     &quot;Python.db.executor&quot;: &quot;Run&quot;,
     &quot;Python.handlers (1).executor&quot;: &quot;Run&quot;,
@@ -57,6 +59,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="calender bot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="calender bot" />
       <option name="ENV_FILES" value="" />
@@ -149,6 +173,7 @@
       <list>
         <item itemvalue="Python.main" />
         <item itemvalue="Python.db" />
+        <item itemvalue="Python.api" />
         <item itemvalue="Python.handlers (1)" />
         <item itemvalue="Python.handlers" />
       </list>
@@ -186,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731105241199</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deleted task notification time, all commands finish, automatic sended notifications">
+      <option name="closed" value="true" />
+      <created>1731245883443</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731245883443</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +236,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="keyboard &amp; sqlalchemy models" />
     <MESSAGE value="set notification time" />
-    <option name="LAST_COMMIT_MESSAGE" value="set notification time" />
+    <MESSAGE value="deleted task notification time, all commands finish, automatic sended notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted task notification time, all commands finish, automatic sended notifications" />
   </component>
 </project>

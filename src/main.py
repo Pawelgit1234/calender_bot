@@ -19,7 +19,7 @@ TOKEN = getenv('TOKEN')
 dp = Dispatcher()
 bot = Bot(token=TOKEN)
 
-async def scheduled_task():
+async def scheduled_task() -> None:
 	while True:
 		now = datetime.now()
 

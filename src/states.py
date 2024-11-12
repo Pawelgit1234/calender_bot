@@ -6,3 +6,5 @@ class CalenderSetting(StatesGroup):
 	adding_task_time = State()
 	adding_task_notification_time = State()
 	adding_task_text = State()
+
+	adding_city = State()

@@ -13,6 +13,8 @@ class User(Base):
 	id: Mapped[int] = mapped_column(primary_key=True) # Telegram ID
 	notification_time: Mapped[time] = mapped_column(Time, default=time(6, 0))
 	tasks: Mapped[list["Task"]] = relationship("Task", back_populates="user")
+	lat: Mapped[float] = mapped_column()
+	lon: Mapped[float] = mapped_column()
 
 class Task(Base):
 	__tablename__ = 'tasks'

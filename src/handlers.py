@@ -10,20 +10,46 @@ import datetime
 from states import CalenderSetting
 from db import engine, User, Task
 from keyboards import main_keyboard
+from api import get_city_coordinates
 
 router = Router()
 
 @router.message(CommandStart())
-async def command_start_handler(message: Message) -> None:
+async def command_start_handler(message: Message, state: FSMContext) -> None:
     user_id = message.from_user.id
+
     with Session(engine) as session:
         user = session.get(User, user_id)
-        if not user:
-            user = User(id=user_id)
-            session.add(user)
-            session.commit()
-    await message.answer("Choose option:", reply_markup=main_keyboard)
 
+        if user and user.lat and user.lon:
+            await message.answer("Choose option:", reply_markup=main_keyboard)
+            return
+
+        await message.answer("Please provide your city:")
+        await state.set_state(CalenderSetting.adding_city)
+
+@router.message(CalenderSetting.adding_city)
+async def adding_city_handler(message: Message, state: FSMContext) -> None:
+    try:
+        city = message.text
+        user_id = message.from_user.id
+        lat, lon = await get_city_coordinates(city)
+
+        with Session(engine) as session:
+            user = session.get(User, user_id)
+
+            if not user:
+                user = User(id=user_id, lat=lat, lon=lon)
+                session.add(user)
+            else:
+                user.lat = lat
+                user.lon = lon
+            session.commit()
+
+        await state.clear()
+        await message.answer("Choose option:", reply_markup=main_keyboard)
+    except ValueError:
+        await message.answer("City not found. Type again.")
 
 ########## Set Notification Time ##########
 
@@ -91,7 +117,7 @@ async def process_adding_task_text(message: Message, state: FSMContext) -> None:
     state_data = await state.get_data()
     task_time = state_data.get("task_time")
     task_notification_time = state_data.get("task_notification_time")
-
+    
     with Session(engine) as session:
         user = session.get(User, user_id)
         if user:
