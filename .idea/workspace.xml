@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72b6a2c4-ca93-4b3d-9937-491a6a1722e3" name="Changes" comment="sending weather information  every day once">
-      <change afterPath="$PROJECT_DIR$/src/decorators.py" afterDir="false" />
+    <list default="true" id="72b6a2c4-ca93-4b3d-9937-491a6a1722e3" name="Changes" comment="registration check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731430021584</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="registration check">
+      <option name="closed" value="true" />
+      <created>1731761123989</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731761123989</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +259,7 @@
     <MESSAGE value="deleted task notification time, all commands finish, automatic sended notifications" />
     <MESSAGE value="lat lon to user, weather information" />
     <MESSAGE value="sending weather information  every day once" />
-    <option name="LAST_COMMIT_MESSAGE" value="sending weather information  every day once" />
+    <MESSAGE value="registration check" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration check" />
   </component>
 </project>
