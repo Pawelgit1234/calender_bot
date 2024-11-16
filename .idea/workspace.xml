@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72b6a2c4-ca93-4b3d-9937-491a6a1722e3" name="Changes" comment="lat lon to user, weather information">
-      <change afterPath="$PROJECT_DIR$/src/schedulers.py" afterDir="false" />
+    <list default="true" id="72b6a2c4-ca93-4b3d-9937-491a6a1722e3" name="Changes" comment="sending weather information  every day once">
+      <change afterPath="$PROJECT_DIR$/src/decorators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731427482792</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sending weather information  every day once">
+      <option name="closed" value="true" />
+      <created>1731430021584</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731430021584</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +251,7 @@
     <MESSAGE value="set notification time" />
     <MESSAGE value="deleted task notification time, all commands finish, automatic sended notifications" />
     <MESSAGE value="lat lon to user, weather information" />
-    <option name="LAST_COMMIT_MESSAGE" value="lat lon to user, weather information" />
+    <MESSAGE value="sending weather information  every day once" />
+    <option name="LAST_COMMIT_MESSAGE" value="sending weather information  every day once" />
   </component>
 </project>

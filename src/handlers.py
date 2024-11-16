@@ -11,6 +11,7 @@ from states import CalenderSetting
 from db import engine, User, Task
 from keyboards import main_keyboard
 from api import get_city_coordinates
+from decorators import check_registration
 
 router = Router()
 
@@ -54,6 +55,7 @@ async def adding_city_handler(message: Message, state: FSMContext) -> None:
 ########## Set Notification Time ##########
 
 @router.message(lambda message: message.text == "Set Notification Time")
+@check_registration
 async def command_set_notification_time_handler(message: Message, state: FSMContext) -> None:
     await message.answer("What time is best for you? Please provide the time in HH:MM format:", reply_markup=ReplyKeyboardRemove())
     await state.set_state(CalenderSetting.setting_notification_time)
@@ -82,6 +84,7 @@ async def process_notification_time(message: Message, state: FSMContext) -> None
 ########## Add Task ##########
 
 @router.message(lambda message: message.text == 'Add Task')
+@check_registration
 async def command_add_task_handler(message: Message, state: FSMContext) -> None:
     await message.answer(f"When do you need to do this task? Please provide the time in format MM.YYYY.DD HH:MM: ", reply_markup=ReplyKeyboardRemove())
     await state.set_state(CalenderSetting.adding_task_time)
@@ -139,7 +142,8 @@ async def process_adding_task_text(message: Message, state: FSMContext) -> None:
 ########## Show All Tasks ##########
 
 @router.message(lambda message: message.text == 'Show All Tasks')
-async def command_show_all_tasks_handler(message: Message) -> None:
+@check_registration
+async def command_show_all_tasks_handler(message: Message, state: FSMContext) -> None:
     user_id = message.from_user.id
 
     with Session(engine) as session:
